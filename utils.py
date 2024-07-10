@@ -1,6 +1,5 @@
 def get_user_input():
-    # TODO: Implement user input function
-    pass
+    return input("Please enter the URL of the web page: ")
 
 def display_answer(answer):
     # TODO: Implement answer display function

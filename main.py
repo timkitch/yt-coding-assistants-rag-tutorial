@@ -14,12 +14,14 @@ from utils import get_user_input, display_answer
 load_dotenv()
 
 def main():
-    # TODO: Implement main function
-    pass
+    url = get_user_input()
+    content = load_and_process_document(url)
+    print(content)
 
 def load_and_process_document(url):
-    # TODO: Implement document loading and processing
-    pass
+    loader = WebBaseLoader(url)
+    document = loader.load()
+    return document[0].page_content
 
 def create_vectorstore(documents):
     # TODO: Implement vectorstore creation
