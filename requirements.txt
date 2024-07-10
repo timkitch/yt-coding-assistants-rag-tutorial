@@ -1,0 +1,6 @@
+langchain==0.2.0
+langchain-community
+langchain-openai
+chromadb
+beautifulsoup4
+python-dotenv
