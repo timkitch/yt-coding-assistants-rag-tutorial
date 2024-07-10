@@ -15,17 +15,21 @@ load_dotenv()
 
 def main():
     url = get_user_input()
-    content = load_and_process_document(url)
-    print(content)
+    documents = load_and_process_document(url)
+    vectorstore = create_vectorstore(documents)
+    print("Vector store created successfully.")
 
 def load_and_process_document(url):
     loader = WebBaseLoader(url)
-    document = loader.load()
-    return document[0].page_content
+    documents = loader.load()
+    text_splitter = RecursiveCharacterTextSplitter(chunk_size=1000, chunk_overlap=200)
+    splits = text_splitter.split_documents(documents)
+    return splits
 
 def create_vectorstore(documents):
-    # TODO: Implement vectorstore creation
-    pass
+    embeddings = OpenAIEmbeddings()
+    vectorstore = Chroma.from_documents(documents, embeddings)
+    return vectorstore
 
 def create_rag_chain(retriever):
     # TODO: Implement RAG chain creation
