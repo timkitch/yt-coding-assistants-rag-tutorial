@@ -4,3 +4,4 @@ langchain-openai
 chromadb
 beautifulsoup4
 python-dotenv
+streamlit
