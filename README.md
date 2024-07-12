@@ -23,8 +23,8 @@ This application allows users to ask questions about the content of a web page u
 
 1. Clone the repository:
    ```
-   git clone https://github.com/yourusername/web-page-qa-app.git
-   cd web-page-qa-app
+   git clone https://github.com/timkitch/yt-coding-assistants-rag-tutorial.git
+   cd yt-coding-assistants-rag-tutorial
    ```
 
 2. Install the required dependencies:
